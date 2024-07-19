@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+:root{
+    --fonte-titulo:"Big Shoulders Display";
+    --fonte-texto:"Lexend Deca";
+    --cor-titulo: hsl(0, 0%, 95%);
+    --cor-texto:hsla(0, 0%, 100%, 0.75);
+    --fundo-sedan:hsl(31, 77%, 52%);
+    --fundo-suv:hsl(184, 100%, 22%);
+    --fundo-luxury:hsl(179, 100%, 13%);
+}
+body{
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size:1rem;
+    color: var(--cor-texto);
+}
+.container{
+    margin:15%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+}
+.card__esquerda{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.card__direita{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.carros{
+    padding:3em 15% 2em 15%;
+    width: auto;
+    height: 100%;
+    
+}
+.titulo{
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--cor-titulo);
+    text-transform: uppercase;
+}
+.paragrafo{
+    margin: 2em 0 6em 0;
+}
+.sedan{
+    background-color: var(--fundo-sedan);
+}
+.sedan a{
+   color: var(--fundo-sedan);
+}
+.suv{
+    background-color: var(--fundo-suv);
+}
+.suv a{
+    color: var(--fundo-suv);
+}
+.luxury{
+    background-color: var(--fundo-luxury);
+}
+.luxury a{
+    color: var(--fundo-luxury);
+}
+.saiba-mais{
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+    padding: 1rem 10%;
+    border-radius: 30px;
+    
+}
+@media screen and (max-width: 500px){
+    .container{
+        margin: 5em 1em;
+        grid-template-columns:auto;
+        grid-template-rows: auto;
+    }
+    .card__esquerda{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+    .card__direita{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .paragrafo{
+        margin: 2em 0 2em 0;
+    }
+    .carros{
+        padding:3em 15% 3em 15%;
+    }
+    .saiba-mais{
+        margin-bottom: 3em;
+    }
+}
+
